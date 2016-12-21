@@ -10,7 +10,7 @@
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
-        "jdmaymeow/cake-bootstrap": ">=1.0"
+        "jdmaymeow/cake-bootstrap": "1.*"
     },
     "require-dev": {
         "psy/psysh": "@stable",
