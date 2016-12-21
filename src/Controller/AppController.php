@@ -47,6 +47,7 @@ class AppController extends Controller
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
             'authorize' => ['Controller'], // Added this line
+            'loginAction' => '/users/login', //Added this to ensure correct redirecting from prefixed routes
             'loginRedirect' => [
                 'controller' => 'Links',
                 'action' => 'index'
