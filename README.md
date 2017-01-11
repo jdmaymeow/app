@@ -29,3 +29,14 @@ configuration relevant for your application.
 ## Code Advent Configuration file
 
 Code Advent (CA) plugins will use this file to read some configurations. You can edit this file at `config/codeadvent.json`.
+
+## Docker
+
+```bash
+docker create --name my-app --privileged -p 80 \
+-e MYSQL_HOST=localhost \
+-e MYSQL_USER=user \
+-e MYSQL_PASS=pass \
+-e MYSQL_DB_NAME=database \
+-v /data:/var/www/html/webroot/data jdmaymeow/app
+```
