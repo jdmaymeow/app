@@ -80,6 +80,13 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+
+        /*
+         * For enable themes uncomment following ling and change theme name of your chioce
+         * for more ingormation see https://book.cakephp.org/3.0/en/views/themes.html
+         * TODO theme specification for CA2016 APP
+         */
+        //$this->viewBuilder()->theme('Modern');
     }
 
     public function beforeFilter(Event $event)
