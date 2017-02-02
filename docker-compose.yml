@@ -12,12 +12,13 @@ services:
             MYSQL_USER: codeadvent2016
             MYSQL_PASSWORD: codeadvent2016
 
-    codeadventapp:
+    cakeapp:
+        build: .
         depends_on:
             - db
-        image: registry.gitlab.cafe/may/app:latest
         volumes:
-            - codeadvent_data:/var/www/html/webroot/data
+            - cakeapp_data:/var/www/html/webroot/data
+            - cakeapp_config:/var/www/html/config
         ports:
             - "8081:80"
         restart: always
@@ -28,4 +29,5 @@ services:
             MYSQL_DB_NAME: codeadvent2016
 volumes:
     db_data:
-    codeadvent_data:
+    cakeapp_data:
+    cakeapp_config:
